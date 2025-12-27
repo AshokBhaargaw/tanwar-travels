@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Header() {
@@ -8,19 +9,30 @@ export default function Header() {
   return (
     <header className="fixed top-0 w-full bg-yellow-900 shadow z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
-        
         {/* Logo */}
-        <h1 className="font-bold text-lg sm:text-xl text-yellow-400">
-          Tanwar Tour & Travels
-        </h1>
+        <Link href={"https://tanwar-travels.vercel.app/"}>
+          <h1 className="font-bold text-lg sm:text-xl text-yellow-400 cursor-pointer">
+            Tanwar Tour & Travels
+          </h1>
+        </Link>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-6 text-sm font-medium text-white">
-          <a href="" className="hover:text-yellow-400">Home</a>
-          <a href="#about" className="hover:text-yellow-400">About</a>
-          <a href="#services" className="hover:text-yellow-400">Services</a>
-          <a href="#fleet" className="hover:text-yellow-400">Fleet</a>
-          <a href="#contact" className="hover:text-yellow-400">Contact</a>
+          <a href="" className="hover:text-yellow-400">
+            Home
+          </a>
+          <a href="#about" className="hover:text-yellow-400">
+            About
+          </a>
+          <a href="#services" className="hover:text-yellow-400">
+            Services
+          </a>
+          <a href="#fleet" className="hover:text-yellow-400">
+            Fleet
+          </a>
+          <a href="#contact" className="hover:text-yellow-400">
+            Contact
+          </a>
         </nav>
 
         {/* Mobile Menu Button */}
